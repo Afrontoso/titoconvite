@@ -172,6 +172,18 @@
     );
   });
 
+  // Máscara do telefone: (61) 99999-9999 ou (61) 3333-4444
+  const tel = document.getElementById("f-tel");
+  tel.addEventListener("input", () => {
+    let d = tel.value.replace(/\D/g, "");
+    if (d.length > 11 && d.startsWith("55")) d = d.slice(2); // colou com +55
+    d = d.slice(0, 11);
+    let v = d;
+    if (d.length > 2) v = `(${d.slice(0, 2)}) ${d.slice(2)}`;
+    if (d.length > 6) v = `(${d.slice(0, 2)}) ${d.slice(2, d.length === 11 ? 7 : 6)}-${d.slice(d.length === 11 ? 7 : 6)}`;
+    tel.value = v;
+  });
+
   form.addEventListener("change", (e) => {
     if (e.target.name === "vai") grupoQtd.hidden = e.target.value !== "Sim";
   });
