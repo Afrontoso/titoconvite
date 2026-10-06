@@ -85,14 +85,17 @@
     // não atrapalha quem está preenchendo o formulário
     if (document.hidden || form.contains(document.activeElement)) return agendarEspiao();
 
-    const W = innerWidth, H = innerHeight, s = espiao.offsetWidth;
+    // Começa fora da tela e entra o bastante para mostrar a cabeça e o peito,
+    // sempre em pé, só inclinado para dentro da tela.
+    const W = innerWidth, H = innerHeight, w = espiao.offsetWidth, h = espiao.offsetHeight;
     const lado = item(LADOS);
+    const inclina = sortear(-6, 6);
     let x, y, dx = 0, dy = 0, rot = 0;
-    if (lado === "esquerda") { x = -s; y = sortear(0.15, 0.7) * H; dx = s * 0.65; rot = 25; }
-    if (lado === "direita") { x = W; y = sortear(0.15, 0.7) * H; dx = -s * 0.65; rot = -25; }
-    if (lado === "baixo") { x = sortear(0.1 * W, 0.9 * W - s); y = H; dy = -s * 0.85; rot = sortear(-12, 12); }
-    if (lado === "canto-esq") { x = -s; y = H; dx = s * 0.8; dy = -s * 0.8; rot = 35; }
-    if (lado === "canto-dir") { x = W; y = H; dx = -s * 0.8; dy = -s * 0.8; rot = -35; }
+    if (lado === "esquerda") { x = -w; y = sortear(0.1 * H, H - h * 0.9); dx = w * 0.72; rot = 14 + inclina; }
+    if (lado === "direita") { x = W; y = sortear(0.1 * H, H - h * 0.9); dx = -w * 0.72; rot = -14 + inclina; }
+    if (lado === "baixo") { x = sortear(0.05 * W, 0.95 * W - w); y = H; dy = -h * 0.78; rot = inclina; }
+    if (lado === "canto-esq") { x = -w; y = H; dx = w * 0.7; dy = -h * 0.72; rot = 22; }
+    if (lado === "canto-dir") { x = W; y = H; dx = -w * 0.7; dy = -h * 0.72; rot = -22; }
 
     // posiciona escondido fora da tela, sem animar
     espiao.style.transition = "none";
