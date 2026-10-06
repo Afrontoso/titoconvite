@@ -9,6 +9,9 @@
   const inicio = new Date(`${C.data}T${temHora ? C.hora : "00:00"}:00-03:00`);
   const [ano, mes, dia] = C.data.split("-").map(Number);
   const diaSemana = SEMANA[new Date(Date.UTC(ano, mes - 1, dia)).getUTCDay()];
+  // "11:00" -> "11h", "15:30" -> "15h30"
+  const [hh, mm] = (C.hora || "0:00").split(":");
+  const horaCurta = `${Number(hh)}h${mm === "00" ? "" : mm}`;
 
   const valores = {
     nome: C.nome,
@@ -16,10 +19,10 @@
     dia: String(dia),
     mesExtenso: "de " + MESES[mes - 1],
     diaSemana,
-    hora: temHora ? C.hora.replace(/^0/, "") : "A definir",
-    horaLegenda: temHora ? "horas" : "horário",
-    horaHero: temHora ? "às " + C.hora.replace(/^0/, "") : "horário a confirmar",
-    horaRodape: temHora ? C.hora.replace(/^0/, "") : "horário a confirmar",
+    hora: temHora ? horaCurta : "A definir",
+    horaLegenda: temHora ? C.obsHora || "horas" : "horário",
+    horaHero: temHora ? "às " + horaCurta + (C.obsHora ? " · " + C.obsHora : "") : "horário a confirmar",
+    horaRodape: temHora ? horaCurta : "horário a confirmar",
     localNome: C.localNome,
     localEndereco: C.localEndereco,
     prazo: C.prazo,

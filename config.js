@@ -8,14 +8,16 @@ window.CONVITE = {
 
   // Data da festa (AAAA-MM-DD)
   data: "2026-12-20",
-  // TODO: horário (ex.: "15:00", horário de Brasília). Vazio = "horário a confirmar"
-  hora: "",
+  // Horário (ex.: "15:00", horário de Brasília). Vazio = "horário a confirmar"
+  hora: "09:00",
+  // Aparece junto do horário (ex.: "almoço às 11h"). Pode deixar vazio.
+  obsHora: "almoço às 11h",
   // Duração em horas (usada no "Adicionar à agenda" quando tiver horário)
-  duracaoHoras: 4,
+  duracaoHoras: 5,
 
-  // TODO: local da festa
-  localNome: "Nome do Buffet",
-  localEndereco: "Endereço completo, Brasília - DF",
+  // Local da festa
+  localNome: "Residencial Santos Dumont",
+  localEndereco: "QRI 26, Casa 11 - Santa Maria, DF",
 
   // Prazo para confirmar presença
   prazo: "30 de novembro",
@@ -25,8 +27,8 @@ window.CONVITE = {
 
   // TODO: sugestões de presentes
   presentes: [
-    "Roupa tamanho 6 anos",
-    "Calçado tamanho 30",
+    "Roupa tamanho 8 anos",
+    "Calçado tamanho 30", // TODO: conferir o número
     "Brinquedos de super-heróis",
     "Carrinhos e caminhões",
     "Livros e gibis",
