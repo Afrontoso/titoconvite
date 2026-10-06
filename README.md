@@ -18,6 +18,8 @@ python3 -m http.server 8000
 1. Crie uma planilha nova em https://sheets.new (ex.: "Convidados Tito").
 2. No menu, vá em **Extensões → Apps Script**.
 3. Apague o que tiver lá e cole o conteúdo de [`apps-script/Code.gs`](apps-script/Code.gs). Salve.
+   Escolha a função **autorizar** no menu ao lado de "Depurar" e clique em **Executar** para dar permissão.
+   (Se aparecer "Erro 401: invalid_client", tente numa janela anônima logado só nessa conta Google.)
 4. Clique em **Implantar → Nova implantação**:
    - Tipo: **App da Web**
    - Executar como: **Eu**

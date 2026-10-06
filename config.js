@@ -38,5 +38,5 @@ window.CONVITE = {
   // URL do Google Apps Script que salva as respostas na planilha.
   // Veja o passo a passo no README.md. Enquanto estiver vazio,
   // a confirmação só abre o WhatsApp.
-  planilhaUrl: "",
+  planilhaUrl: "https://script.google.com/macros/s/AKfycbylJ56p2HZJG2ToOzN8ECjsCY0wBbk-5PcuuL035zdIw2QkAUWVh40SOTbZBnb3B2wz/exec",
 };

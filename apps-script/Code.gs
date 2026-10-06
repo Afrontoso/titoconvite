@@ -40,6 +40,12 @@ function doPost(e) {
   }
 }
 
+// Rode esta função uma vez pelo editor (botão "Executar") para autorizar
+// o script a usar a planilha. Ela também cria a aba "Confirmações".
+function autorizar() {
+  pegarAba();
+}
+
 function pegarAba() {
   const planilha = SpreadsheetApp.getActiveSpreadsheet();
   let aba = planilha.getSheetByName(ABA);
