@@ -222,6 +222,11 @@
       mostrarErro("Quantas pessoas vêm? Coloca pelo menos 1.");
       return;
     }
+    if (dados.vai === "Sim" && !dados.acompanhantes) {
+      mostrarErro("Coloca o nome de quem vem, pra gente saber quem esperar 🙂");
+      form.acompanhantes.focus();
+      return;
+    }
 
     btn.disabled = true;
     btn.textContent = "Enviando…";

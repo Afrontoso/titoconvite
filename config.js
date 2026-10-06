@@ -28,7 +28,7 @@ window.CONVITE = {
 
   // Sugestões de presentes
   presentes: [
-    "Roupa tamanho 8 anos",
+    "Roupa tamanho 8/10 anos",
     "Calçado tamanho 33/34",
     "Brinquedos de super-heróis",
     "Carrinhos e caminhões",
