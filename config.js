@@ -18,6 +18,8 @@ window.CONVITE = {
   // Local da festa
   localNome: "Residencial Santos Dumont",
   localEndereco: "QRI 26, Casa 11 - Santa Maria, DF",
+  // Link do Google Maps com o ponto exato. Vazio = busca pelo endereço acima
+  mapaUrl: "https://maps.app.goo.gl/Sb72pdzL8qiAp8en9",
 
   // Prazo para confirmar presença
   prazo: "30 de novembro",

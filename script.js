@@ -34,7 +34,7 @@
   });
 
   // ---------- Links ----------
-  const mapa = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(C.localNome + " " + C.localEndereco);
+  const mapa = C.mapaUrl || "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(C.localNome + " " + C.localEndereco);
 
   const pad = (n) => String(n).padStart(2, "0");
   const fmtCal = (d) => `${d.getUTCFullYear()}${pad(d.getUTCMonth() + 1)}${pad(d.getUTCDate())}T${pad(d.getUTCHours())}${pad(d.getUTCMinutes())}00Z`;
