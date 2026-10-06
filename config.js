@@ -10,7 +10,7 @@ window.CONVITE = {
   // Horário (ex.: "15:00", horário de Brasília). Vazio = "horário a confirmar"
   hora: "11:00",
   // Aparece junto do horário (ex.: "almoço"). Pode deixar vazio.
-  obsHora: "almoço",
+  obsHora: "almoço com feijoada",
   // Duração em horas (usada no "Adicionar à agenda" quando tiver horário)
   duracaoHoras: 4,
 
