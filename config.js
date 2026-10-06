@@ -1,6 +1,5 @@
 // ============================================================
 //  Tudo que você precisa editar no convite está aqui.
-//  Os itens marcados com  TODO  ainda são exemplos — troque!
 // ============================================================
 window.CONVITE = {
   nome: "Tito",
@@ -9,11 +8,11 @@ window.CONVITE = {
   // Data da festa (AAAA-MM-DD)
   data: "2026-12-20",
   // Horário (ex.: "15:00", horário de Brasília). Vazio = "horário a confirmar"
-  hora: "09:00",
-  // Aparece junto do horário (ex.: "almoço às 11h"). Pode deixar vazio.
-  obsHora: "almoço às 11h",
+  hora: "11:00",
+  // Aparece junto do horário (ex.: "almoço"). Pode deixar vazio.
+  obsHora: "almoço",
   // Duração em horas (usada no "Adicionar à agenda" quando tiver horário)
-  duracaoHoras: 5,
+  duracaoHoras: 4,
 
   // Local da festa
   localNome: "Residencial Santos Dumont",
@@ -27,14 +26,15 @@ window.CONVITE = {
   // WhatsApp que recebe as confirmações (DDI + DDD + número, só dígitos)
   whatsapp: "5561993493393",
 
-  // TODO: sugestões de presentes
+  // Sugestões de presentes
   presentes: [
     "Roupa tamanho 8 anos",
-    "Calçado tamanho 30", // TODO: conferir o número
+    "Calçado tamanho 33/34",
     "Brinquedos de super-heróis",
     "Carrinhos e caminhões",
     "Livros e gibis",
     "Jogos de tabuleiro",
+    "Quebra-cabeça",
   ],
 
   // URL do Google Apps Script que salva as respostas na planilha.
